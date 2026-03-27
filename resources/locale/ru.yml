@@ -1,0 +1,16 @@
+fof-oauth:
+  lib:
+    providers:
+      yandex: Яндекс
+
+  forum:
+    log_in:
+      with_yandex_button: Войти через Яндекс
+
+  admin:
+    settings:
+      providers:
+        yandex:
+          description: "Создайте приложение по ссылке https://oauth.yandex.ru"
+          client_id_label: ID клиента
+          client_secret_label: Секретный ключ клиента

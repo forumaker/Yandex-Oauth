@@ -1,0 +1,48 @@
+{
+  "name": "forumaker/yandex-oauth",
+  "description": "Add a Yandex ID OAuth provider for FoF OAuth",
+  "type": "flarum-extension",
+  "keywords": ["flarum", "flarum-extension", "yandex", "yandexid", "oauth"],
+  "license": "MIT",
+  "homepage": "https://github.com/forumaker/Yandex-Oauth",
+  "support": {
+    "issues": "https://github.com/forumaker/Yandex-Oauth/issues",
+    "source": "https://github.com/forumaker/Yandex-Oauth",
+    "forum": "https://discuss.flarum.org/"
+  },
+  "authors": [
+    {
+      "name": "forumaker",
+      "role": "Developer",
+      "homepage": "https://github.com/forumaker"
+    }
+  ],
+  "require": {
+    "php": "^8.2",
+    "flarum/core": "^2.0",
+    "fof/oauth": "^2.0",
+    "league/oauth2-client": "^2.8"
+  },
+  "autoload": {
+    "psr-4": {
+      "forumaker\\Yandex\\": "src/"
+    }
+  },
+  "extra": {
+    "branch-alias": {
+      "dev-2.x": "2.x-dev"
+    },
+    "flarum-extension": {
+      "title": "Yandex OAuth",
+      "category": "authentication",
+      "icon": {
+        "name": "fa-brands fa-yandex",
+        "backgroundColor": "#FC3F1D",
+        "color": "#ffffff"
+      }
+    }
+  },
+  "config": {
+    "sort-packages": true
+  }
+}
