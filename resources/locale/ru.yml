@@ -4,6 +4,8 @@ fof-oauth:
       yandex: Яндекс
 
   forum:
+    providers:
+      yandex: Яндекс
     log_in:
       with_yandex_button: Войти через Яндекс
 
