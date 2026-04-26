@@ -59,7 +59,7 @@ class Yandex extends Provider
         }
 
         if ($user->getRealName()) {
-            $registration->provideNickname($user->getRealName());
+            $registration->provide('nickname', $user->getRealName());
         }
 
         if ($user->getAvatarUrl()) {
