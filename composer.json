@@ -1,6 +1,6 @@
 {
   "name": "forumaker/yandex-oauth",
-  "description": "Add a Yandex ID OAuth provider for FoF OAuth",
+  "description": "Adds a Yandex ID OAuth provider for FoF OAuth",
   "type": "flarum-extension",
   "keywords": ["flarum", "flarum-extension", "yandex", "yandexid", "oauth"],
   "license": "MIT",
