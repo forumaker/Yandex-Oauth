@@ -4,7 +4,6 @@ namespace forumaker\Yandex\OAuth2;
 
 use League\OAuth2\Client\Provider\AbstractProvider;
 use League\OAuth2\Client\Provider\Exception\IdentityProviderException;
-use League\OAuth2\Client\Provider\GenericResourceOwner;
 use League\OAuth2\Client\Token\AccessToken;
 use Psr\Http\Message\ResponseInterface;
 
@@ -12,12 +11,12 @@ class YandexProvider extends AbstractProvider
 {
     public function getBaseAuthorizationUrl(): string
     {
-        return 'https://oauth.yandex.com/authorize';
+        return 'https://oauth.yandex.ru/authorize';
     }
 
     public function getBaseAccessTokenUrl(array $params): string
     {
-        return 'https://oauth.yandex.com/token';
+        return 'https://oauth.yandex.ru/token';
     }
 
     public function getResourceOwnerDetailsUrl(AccessToken $token): string
@@ -38,9 +37,7 @@ class YandexProvider extends AbstractProvider
     protected function checkResponse(ResponseInterface $response, $data): void
     {
         if (isset($data['error'])) {
-            $message = is_array($data)
-                ? ($data['error_description'] ?? $data['message'] ?? $data['error'])
-                : 'Unknown Yandex OAuth error';
+            $message = $data['error_description'] ?? $data['message'] ?? $data['error'];
 
             throw new IdentityProviderException((string) $message, (int) $response->getStatusCode(), $data);
         }
@@ -67,7 +64,7 @@ class YandexProvider extends AbstractProvider
         return ['Accept' => 'application/json'] + parent::getDefaultHeaders();
     }
 
-    public function getResourceOwner(AccessToken $token): YandexResourceOwner|GenericResourceOwner
+    public function getResourceOwner(AccessToken $token): YandexResourceOwner
     {
         $request = $this->getAuthenticatedRequest(
             self::METHOD_GET,

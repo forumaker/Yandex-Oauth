@@ -1,11 +1,15 @@
 # ✨ Yandex OAuth for Flarum
 Adds a Yandex ID OAuth provider for [FoF OAuth](https://github.com/FriendsOfFlarum/oauth). Supports **Flarum 2.x**
 
-![License](https://img.shields.io/badge/license-MIT-blue) ![Packagist Version](https://img.shields.io/packagist/v/forumaker/yandex-oauth) ![Downloads](https://img.shields.io/packagist/dt/forumaker/yandex-oauth)
+![License](https://img.shields.io/badge/license-MIT-blue) ![Packagist Version](https://img.shields.io/packagist/v/forumaker/yandex-oauth) ![Downloads](https://img.shields.io/packagist/dt/forumaker/yandex-oauth) (https://floxum.com/extension/forumaker/yandex-oauth/badge/review-score)
 
 ## 🚀 Features
 - ⚙️ Yandex ID login via FoF OAuth
 - 🎨 Styled login button for the forum frontend
+
+
+## 📸 Screenshots
+<img width="1240" height="570" alt="image" src="https://github.com/user-attachments/assets/b9036e87-0e33-4278-b21e-1d3c98c4516b" />
 
 
 ## 📦 Installation
@@ -14,10 +18,6 @@ Run this in your Flarum root directory:
 ```
 composer require forumaker/yandex-oauth:"*"
 ```
-
-
-## 📸 Screenshots
-<img width="1240" height="570" alt="image" src="https://github.com/user-attachments/assets/b9036e87-0e33-4278-b21e-1d3c98c4516b" />
 
 
 ## 🛠️ Configuration
