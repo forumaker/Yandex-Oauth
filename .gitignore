@@ -7,3 +7,6 @@ Thumbs.db
 
 .idea/
 .vscode/
+composer.lock
+.phpunit.result.cache
+tests/.phpunit.result.cache

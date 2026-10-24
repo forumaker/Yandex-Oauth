@@ -2,7 +2,13 @@
   "name": "forumaker/yandex-oauth",
   "description": "Adds a Yandex ID OAuth provider for FoF OAuth",
   "type": "flarum-extension",
-  "keywords": ["flarum", "flarum-extension", "yandex", "yandexid", "oauth"],
+  "keywords": [
+    "flarum",
+    "flarum-extension",
+    "yandex",
+    "yandexid",
+    "oauth"
+  ],
   "license": "MIT",
   "homepage": "https://github.com/forumaker/Yandex-Oauth",
   "support": {
@@ -45,5 +51,21 @@
   },
   "config": {
     "sort-packages": true
-  }
+  },
+  "require-dev": {
+    "flarum/testing": "^2.0"
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "forumaker\\Yandex\\Tests\\": "tests/"
+    }
+  },
+  "scripts": {
+    "test": [
+      "@test:unit"
+    ],
+    "test:unit": "phpunit -c tests/phpunit.unit.xml"
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
 }
